@@ -2,7 +2,7 @@
 """Iter function extended class module"""
 
 
-class CountedIterator():
+class CountedIterator:
     """Custom iterator class that counts the iterator items"""
 
     def __init__(self, iterable):
@@ -13,9 +13,9 @@ class CountedIterator():
         return self.counter
 
     def __next__(self):
-        self.counter += 1
         try:
+            self.counter += 1
             item = next(self.iterator)
             return item
-        except StopIteration:
+        except Exception:
             raise StopIteration
