@@ -14,8 +14,8 @@ class CountedIterator:
 
     def __next__(self):
         try:
-            self.counter += 1
             item = next(self.iterator)
+            self.counter += 1
             return item
         except Exception:
             raise StopIteration
